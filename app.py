@@ -32,4 +32,5 @@ def run_flow(inputs: dict, flow_id: str, tweaks: Optional[dict] = None) -> dict:
 
 # Setup any tweaks you want to apply to the flow
 inputs = {"input":"write about twitter"}
-st.write(run_flow(inputs, flow_id=FLOW_ID, tweaks=TWEAKS))
+a=print(run_flow(inputs, flow_id=FLOW_ID, tweaks=TWEAKS))
+st.write(a)
