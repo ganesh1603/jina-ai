@@ -1,9 +1,9 @@
 import requests
 from typing import Optional
-import streamlit as st
 
-BASE_API_URL = "https://langflow-f6b676648a.wolf.jina.ai/api/v1/process"
-FLOW_ID = "caddf5de-d712-41a2-9084-3745b7947154"
+
+BASE_API_URL = "YOUR BASE API URL"
+FLOW_ID = "YOUR FLOW ID"
 # You can tweak the flow by adding a tweaks dictionary
 # e.g {"OpenAI-XXXXX": {"model_name": "gpt-4"}}
 TWEAKS = {
@@ -31,5 +31,5 @@ def run_flow(inputs: dict, flow_id: str, tweaks: Optional[dict] = None) -> dict:
     return response.json()
 
 # Setup any tweaks you want to apply to the flow
-inputs = {"input":"write about twitter"}
+inputs = {"input":""}
 print(run_flow(inputs, flow_id=FLOW_ID, tweaks=TWEAKS))
